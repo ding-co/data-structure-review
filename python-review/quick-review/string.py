@@ -7,6 +7,10 @@ hw = hello + ' ' + world                # String concatenation
 print(hw)                               # Prints hello world
 hw12 = '%s %s %d' % (hello, world, 12)  # sprintf style string formatting
 print(hw12)                             # Prints hello world 12
+hw13 = "제 이름은 %s입니다. 나이는 %d살 입니다." % ("ding-co", 27)
+print(hw13)
+hw14 = f"{hello} {world}, 14"
+print(hw14)
 
 s = "hello"
 print(s.capitalize())                   # Capitalize a string; prints "Hello"
