@@ -11,6 +11,8 @@ Data Structure Review using Python3 in VS Code
 
 <br/>
 
-`python-review`
+`Python-review`
 
-[`outline`](https://github.com/ding-co/data-structure/blob/main/outline/Outline.md)
+[`Outline`](https://github.com/ding-co/data-structure/blob/main/outline/Outline.md)
+
+[`Asymptotic-notation`](https://github.com/ding-co/data-structure/blob/main/asymptotic-notation/Asymptotic-notation.md)
