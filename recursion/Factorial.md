@@ -1,4 +1,4 @@
-# Recursion
+# Recursion 1.
 
 ## _Consider_
 
@@ -105,18 +105,6 @@ for i in range(20):
   print("-" * 80)
 ```
 
-<br/>
-
-## `Power`
-
-<br/>
-
-## `Fibonacci`
-
-<br/>
-
-## `Tower of Hanoi`
-
 #
 
 ## [Reference]
@@ -133,4 +121,3 @@ for i in range(20):
   True or False => front is True, so need not to see the behind => So, result is True <br/>
   True and True => front is True, so we have to see the behind => behind is True => So, result is True
 - e(E) = 10
--
