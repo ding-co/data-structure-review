@@ -21,8 +21,8 @@ Data Structure Review using Python3 in VS Code
 
 - [`Factorial`](https://github.com/ding-co/data-structure/blob/main/recursion/Factorial.md)
 
-- [`Power`](#)
+- [`Power`](https://github.com/ding-co/data-structure/blob/main/recursion/Power.md)
 
-- [`Fibonacci`](#)
+- [`Fibonacci`](https://github.com/ding-co/data-structure/blob/main/recursion/Fibonacci.md)
 
-- [`Hanoi`](#)
+- [`Hanoi`](https://github.com/ding-co/data-structure/blob/main/recursion/Hanoi.md)

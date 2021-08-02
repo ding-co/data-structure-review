@@ -1,4 +1,4 @@
-# Recursion 1.
+# Recursion 1. <u>Factorial</u>
 
 ## _Consider_
 
@@ -107,7 +107,7 @@ for i in range(20):
 
 #
 
-## [Reference]
+## [Note]
 
 - Recursive; useful for Tree <br/>
   Recursive: call myself cf) Math - recurrence relation, induction <br/>
