@@ -19,7 +19,8 @@
 
 <br/>
 
-## **Question: How to hand out the name tags to event participants efficiently?? (ex. 1000 name tages)**
+## **Question: How to hand out the name tags to event participants efficiently??** <br/>
+### (ex. 1000 name tages)
 
 <br/>
 
@@ -41,7 +42,8 @@
 
 <br/>
 
-### possible #3. <u>Binary search</u>: **_already sorted_**, check middle tag and compare to person's name and then narrow the range (repeat until find)
+### possible #3. <u>Binary search</u>: **_already sorted_**, check middle tag and compare to person's name <br/>
+### and then narrow the range (repeat until find)
 
 - Worst Case: O(logn)
 - Best Case: O(1) <-- Best case is not meaningful. it's just for lucky.
@@ -56,7 +58,8 @@
 
 ## Abstraction: Complex problem -> simple black box (hide complex thing)
 
-## We don't know detail inner principles, we hide complex things covered with black box, and then just use user interfaces. (repeat and make bigger block)
+## We don't know detail inner principles, we hide complex things covered with black box, <br/>
+## and then just use user interfaces. (repeat and make bigger block)
 
 <br/>
 
