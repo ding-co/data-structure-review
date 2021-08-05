@@ -26,3 +26,5 @@ Data Structure Review using Python3 in VS Code
 - [`Fibonacci`](https://github.com/ding-co/data-structure/blob/main/recursion/Fibonacci.md)
 
 - [`Hanoi`](https://github.com/ding-co/data-structure/blob/main/recursion/Hanoi.md)
+
+[`Stack`](https://github.com/ding-co/data-structure/blob/main/stack/Stack.md)
