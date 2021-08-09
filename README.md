@@ -28,3 +28,5 @@ Data Structure Review using Python3 in VS Code
 - [`Hanoi`](https://github.com/ding-co/data-structure/blob/main/recursion/Hanoi.md)
 
 [`Stack`](https://github.com/ding-co/data-structure/blob/main/stack/Stack.md)
+
+[`List`](https://github.com/ding-co/data-structure/blob/main/list/List.md)
