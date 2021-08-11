@@ -206,6 +206,145 @@
   SLL(h): O(2n)? [b/c link] => O(n) <br/>
   DLL: O(3n)? => O(n)
 
+## List Implementation
+
+- Array
+
+```python
+class Array:
+  def __init__(self):
+    self.data = [None] * 100
+    self.cnt = 0
+
+  def insert_head(self, value):
+    for i in range(self.cnt, 0, -1):
+      self.data[i] = self.data[i - 1]
+    self.data[0] = value
+    self.cnt += 1
+
+  def insert_tail(self, value):
+    self.data[self.cnt] = value
+    self.cnt += 1
+
+  def delete_head(self):
+    for i in range(self.cnt):
+      self.data[i] = self.data[i + 1]
+    self.cnt -= 1
+
+  def delete_tail(self):
+    # self.data.pop()
+    self.cnt -= 1
+
+  def count(self):
+    return self.cnt
+
+  def print_all(self):
+    for i in range(self.cnt):
+      print(self.data[i], end = " ")
+    print()
+
+# Simple test case
+array = Array()
+array.insert_head('A')
+array.insert_head('B')
+array.insert_tail('C')
+array.insert_tail('D')
+array.print_all()
+array.delete_tail()
+array.print_all()
+array.delete_head()
+array.print_all()
+```
+
+- SLL (head)
+
+```python
+class SinglyLinkedList1:
+  class Node:
+    def __init__(self, value):
+      self.value = value
+      self.next = None
+
+  def __init__(self):
+    self.head = None
+    # it can declare new variable - cnt
+    # memory cost up, time cost down
+    # self.cnt = 0
+
+  # Time Complexity: O(1)
+  def insert_head(self, value):
+    node = self.Node(value)
+    # if not self.head: node.next = None
+    # if self.head: node.next = previous_head
+    node.next = self.head
+    self.head = node
+
+  # Time Complexity: O(n)
+  def insert_tail(self, value):
+    node = self.Node(value)
+    if not self.head:
+      self.head = node
+      return
+    # p: present node
+    p = self.head
+    while p.next:
+      p = p.next
+    # p: tail
+    p.next = node
+    # p will be disappeared when method call end (local variable)
+
+  # Time Complexity: O(1)
+  def delete_head(self):
+    if not self.head:
+      return
+    self.head = self.head.next
+    # previous_head will be disappeared (Garbage Collector)
+
+  # Time Complexity: O(n)
+  def delete_tail(self):
+    if not self.head:
+      return
+    curr = self.head
+    prev = None
+    while curr.next:
+      prev = curr
+      curr = curr.next
+    # prev: before tail
+    if prev:
+      prev.next = None
+    else:
+      self.head = None
+
+  # if not pre-count, Time Complexity: O(n)
+  def count(self):
+    cnt = 0
+    p = self.head
+    while p:
+      cnt += 1
+      p = p.next
+    return cnt
+
+  # Time Complexity: O(n)
+  def print_all(self):
+    p = self.head
+    while p:
+      print(p.value, end = " ")
+      p = p.next
+    print()
+
+# Simple test case
+sll = SinglyLinkedList1()
+sll.insert_head('A')
+sll.insert_head('B')
+sll.insert_tail('C')
+sll.insert_tail('D')
+sll.print_all()
+sll.delete_tail()
+sll.print_all()
+sll.delete_head()
+sll.print_all()
+```
+
 #
 
 ## [Note]
@@ -219,4 +358,11 @@
 - data item (node)
 - if link disconnects => become like an Interstellar lost child
 - python; if anything reference something, something will be disappeared (dangling)
-- Garbage Collection; remove not using something
+- Garbage Collection; remove not using something <br/>
+  (anything that references something, something will be dangled)
+- module; black box (encapsulation)
+- Always thinking about what function outside <br/>
+  rather than inside implementation
+- class; reference address
+- C language; delete garbage explicitly with code
+-
