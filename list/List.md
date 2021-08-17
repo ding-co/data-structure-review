@@ -259,6 +259,7 @@ array.print_all()
 - SLL (head)
 
 ```python
+# SLL (head)
 class SinglyLinkedList1:
   class Node:
     def __init__(self, value):
@@ -268,7 +269,7 @@ class SinglyLinkedList1:
   def __init__(self):
     self.head = None
     # it can declare new variable - cnt
-    # memory cost up, time cost down
+    # memory cost up, time cost down, consistency low
     # self.cnt = 0
 
   # Time Complexity: O(1)
@@ -278,6 +279,7 @@ class SinglyLinkedList1:
     # if self.head: node.next = previous_head
     node.next = self.head
     self.head = node
+    # self.cnt += 1
 
   # Time Complexity: O(n)
   def insert_tail(self, value):
@@ -292,6 +294,7 @@ class SinglyLinkedList1:
     # p: tail
     p.next = node
     # p will be disappeared when method call end (local variable)
+    # self.cnt += 1
 
   # Time Complexity: O(1)
   def delete_head(self):
@@ -299,6 +302,7 @@ class SinglyLinkedList1:
       return
     self.head = self.head.next
     # previous_head will be disappeared (Garbage Collector)
+    # self.cnt -= 1
 
   # Time Complexity: O(n)
   def delete_tail(self):
@@ -314,6 +318,7 @@ class SinglyLinkedList1:
       prev.next = None
     else:
       self.head = None
+    # self.cnt -= 1
 
   # if not pre-count, Time Complexity: O(n)
   def count(self):
@@ -323,6 +328,7 @@ class SinglyLinkedList1:
       cnt += 1
       p = p.next
     return cnt
+    # return self.cnt
 
   # Time Complexity: O(n)
   def print_all(self):
@@ -343,6 +349,173 @@ sll.delete_tail()
 sll.print_all()
 sll.delete_head()
 sll.print_all()
+```
+
+- SLL (head, tail)
+
+```python
+# SLL (head, tail)
+class SinglyLinkedList2:
+  class Node:
+    def __init__(self, value):
+      self.value = value
+      self.next = None
+
+  def __init__(self):
+    self.head = None
+    self.tail = None
+    self.cnt = 0
+
+  def insert_head(self, value):
+    node = self.Node(value)
+    self.cnt += 1
+    if not self.head:
+      self.head = node
+      self.tail = node
+      return
+    node.next = self.head
+    self.head = node
+
+  def insert_tail(self, value):
+    node = self.Node(value)
+    self.cnt += 1
+    if not self.head:
+      self.head = node
+      self.tail = node
+      return
+    self.tail.next = node
+    self.tail = node
+
+  def delete_head(self):
+    if not self.head:
+      self.tail = None
+      return
+    self.head = self.head.next
+    self.cnt -= 1
+
+  def delete_tail(self):
+    if not self.head:
+      self.tail = None
+      return
+    current = self.head
+    prev = None
+    while current.next:
+      prev = current
+      current = current.next
+    if prev:
+      prev.next = None
+      self.tail = prev
+    else:
+      self.head = None
+      self.tail = None
+    self.cnt -= 1
+
+  def count(self):
+    return self.cnt
+
+  def print_all(self):
+    p = self.head
+    while p:
+      print(p.value, end = " ")
+      p = p.next
+    print()
+
+# Simple test case
+sll = SinglyLinkedList2()
+sll.insert_head('A')
+sll.insert_head('B')
+sll.insert_tail('C')
+sll.insert_tail('D')
+sll.print_all()
+sll.delete_tail()
+sll.print_all()
+sll.delete_head()
+sll.print_all()
+```
+
+- Circular SLL (tail)
+
+```python
+# Circular SLL (tail)
+class CircularSinglyLinkedList:
+  class Node:
+    def __init__(self, value):
+      self.value = value
+      self.next = None
+
+  def __init__(self):
+    self.tail = None
+    self.cnt = 0
+
+  def insert_head(self, value):
+    node = self.Node(value)
+    self.cnt += 1
+    if not self.tail:
+      # point node itself
+      node.next = node
+      self.tail = node
+      return
+    node.next = self.tail.next
+    self.tail.next = node
+
+  def insert_tail(self, value):
+    node = self.Node(value)
+    self.cnt += 1
+    if not self.tail:
+      node.next = node
+      self.tail = node
+      return
+    node.next = self.tail.next
+    self.tail.next = node
+    self.tail = node
+
+  def delete_head(self):
+    if not self.tail:
+      return
+    self.cnt -= 1
+    # node numbers => only one
+    if self.tail == self.tail.next:
+      self.tail = None
+      return
+    # node numbers => greater than or equal to 2
+    self.tail.next = self.tail.next.next
+
+  def delete_tail(self):
+    # ** To Do: Implementation **
+    return
+
+  def count(self):
+    return self.cnt
+
+  def print_all(self):
+    if not self.tail:
+      return
+    head = self.tail.next
+    p = head
+    while p:
+      print(p.value, end = " ")
+      p = p.next
+      if p == head:
+        break
+    print()
+
+# Simple test case
+cirSll = CircularSinglyLinkedList()
+cirSll.insert_head('A')
+cirSll.insert_head('B')
+cirSll.insert_tail('C')
+cirSll.insert_tail('D')
+cirSll.print_all()
+# cirSll.delete_tail()
+# cirSll.print_all()
+cirSll.delete_head()
+cirSll.print_all()
+```
+
+- Circular DLL (head, empty head node)
+
+```python
+
 ```
 
 #
