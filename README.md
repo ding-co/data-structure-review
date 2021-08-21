@@ -30,3 +30,5 @@ Data Structure Review using Python3 in VS Code
 [`Stack`](https://github.com/ding-co/data-structure/blob/main/stack/Stack.md)
 
 [`List`](https://github.com/ding-co/data-structure/blob/main/list/List.md)
+
+[`Queue`](https://github.com/ding-co/data-structure/blob/main/queue/Queue.md)

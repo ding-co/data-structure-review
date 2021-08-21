@@ -1,4 +1,4 @@
-# Stack
+ re# Stack
 
 ## _Outline_
 
@@ -64,8 +64,6 @@ print(s.is_empty())   # True
 #
 
 ## `Parentheses matching`
-
-- 괄호 맞추기 문제 <br/>
 
 ```python
 # ex) (a + b) - c       (OK)
