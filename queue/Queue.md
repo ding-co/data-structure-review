@@ -37,11 +37,11 @@
 # Q.delete()
 # Q.delete()
 
-# way 1. declare 2 variables => front, rear
+# declare 2 variables => front, rear
 # let, front = 0, rear = 0
-# if add: front++, if delete: rear++
+# if add: front++, if delete: return current rear and then rear++
 # add: O(1), delete: O(1)
-# problem: when we delete an element, we can't use before variables
+# problem: when we delete an element, we can't use before memory spaces
 # array's space has set at first time (it's hard to stretch in the middle)
 # if we use all of memory's space, and then go to the first index of the array => O(n)
 # how can we solve above problem??
@@ -49,8 +49,130 @@
 # Use Circular Queue!!!
 ```
 
+```python
+# Circular Queue
+
+# 0 1 2 3 4 (array index)
+# make it circular (like 0 1 2 3 4 0 1 2 3 4 ...)
+# declare 2 variables => front, rear
+# let, front = 0, rear = 0
+# if add: front++, if delete: return current rear and then rear++
+# index: when 5 -> 0 (it has to be changed)
+# how do we know Full? or Empty?
+# Empty? start: F == R (0 == 0)
+# Full? end: F == R ...? (ex. 2 == 2)
+# how can we separate above two cases...?
+
+# It may have many solutions.
+
+# MAX: Maximum number of entries allowed (index + 1 b/c zero index)
+
+# way 1. declare a count variable
+# when add, then count++, delete, then count--
+# if, count == 0 then Empty
+# if, count == MAX then Full
+
+# way 2. use up one less memory space
+# ex) total memory spaces: 4, if front == 3 then Full
+# over MAX => we have to make front to 0
+# if, (front + 1) % MAX == rear then Full
+# count f/r, if, f == r then empty
+```
+
+- Implementation Queue with LinkedList
+
+```python
+# CirSLL(t)
+# Q.add => insert_tail()
+# Q.delete => delete_head()
+
+# DLL
+# can use either one (b/c it has two links)
+# case 1: Q.add / Q.delete => insert_head() / delete_tail()
+# case 2: Q.add / Q.delete => insert_tail() / delete_head()
+```
+
+- Deque (Double-Ended Queue)
+
+```python
+# Queue (FIFO)
+# make it more general
+# add -> delete ->
+# <- delete <- add
+
+# front - rear
+# we can add front / add rear
+# we can delete rear / delete front
+
+# we can make Stack, Queue with Deque
+
+# 4 functions
+# AddFront
+# AddRear
+# DeleteFront
+# DeleteRear
+
+# if we add front and delete front => Stack
+
+# we may can make Deque with array
+# => make it circular bi-direction
+
+# we can make Deque with DLL!!!
+# => insert_head(), delete_head(), insert_tail(), delete_tail()
+
+# Queue in Python (using DLL)
+# collections package (deque)
+# append, appendleft, pop, popleft
+
+# queue.Queue - A synchronized queue class
+# asyncio.Queue - asyncio queue API
+# it has already implemented in Python modules...
+```
+
+- Utilization
+
+  - Stack
+
+    - OS/Memory
+    - Function call
+    - Stack Memory
+
+  - Queue
+
+    - line up (waiting list)
+      - bank waiting (fair)
+    - Job Scheduling
+    - Network Transport
+    - File I/O
+    - Distributed Computing
+    - Keyboard Typing
+      - Queue(Worker) - Processor
+      - Program lined in queue without dying
+    - Event Queue
+    - types
+
+      - Deque
+      - Priority Queue
+
+        - ex) Emergency room
+        - it must be served first...
+        - Each patient has a priority
+
+      - Sync, Async
+        - Sync; You have to wait in the queue until you're done. (spend more time for waiting)
+        - Async; call my name that I will stand in line.
+          - When we add to the queue, we wait until the result is over and then delete it.
+          - if multiple programs add to one queue at the same time. <br/>
+            => it can be crashed. (not ensure reliability) <br/>
+            => we have to make some protection for parallel process. <br/>
+          - we have to make good code for concurrent control <br/>
+            (multiple processes/threads access at the same time => may crashed) <br/>
+            => We can use a Number table (ensure each order)
+      - Big data; Queue => Clustering
+
 #
 
 ## [Note]
 
 - Stack; push, pop (LIFO)
+- delete memory is not correct concept
