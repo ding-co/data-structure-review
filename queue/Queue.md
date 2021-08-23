@@ -79,6 +79,43 @@
 # count f/r, if, f == r then empty
 ```
 
+```python
+class CircularQueue:
+    def __init__(self, max_size):
+      self.max_size = max_size + 1
+      self.queue = [None] * self.max_size
+      self.front = 0
+      self.rear = 0
+
+    def add_queue(self, data):
+      if self.is_full():
+        return None
+      self.queue[self.front] = data
+      self.front = (self.front + 1) % self.max_size
+      return True
+
+    def delete_queue(self):
+      if self.is_empty():
+        return None
+      delete_data = self.queue[self.rear]
+      self.rear = (self.rear + 1) % self.max_size
+      return delete_data
+
+
+    def is_full(self):
+      return (self.front + 1) % max_size == self.rear
+
+    def is_empty(self):
+      return self.front == self.rear
+
+    def size(self):
+      count = 0
+      for data in self.queue:
+        if data:
+          count += 1
+      return count
+```
+
 - Implementation Queue with LinkedList
 
 ```python
