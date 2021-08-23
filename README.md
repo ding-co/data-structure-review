@@ -11,24 +11,62 @@ Data Structure Review using Python3 in VS Code
 
 <br/>
 
-`Python Review`
+Python Review
 
-[`Outline`](https://github.com/ding-co/data-structure/blob/main/outline/Outline.md)
+[Outline](https://github.com/ding-co/data-structure/blob/main/outline/Outline.md)
 
-[`Asymptotic-notation`](https://github.com/ding-co/data-structure/blob/main/asymptotic-notation/Asymptotic-notation.md)
+[Asymptotic notation](https://github.com/ding-co/data-structure/blob/main/asymptotic-notation/Asymptotic-notation.md)
 
-`Recursion`
+Recursion
 
-- [`Factorial`](https://github.com/ding-co/data-structure/blob/main/recursion/Factorial.md)
+- [Factorial](https://github.com/ding-co/data-structure/blob/main/recursion/Factorial.md)
 
-- [`Power`](https://github.com/ding-co/data-structure/blob/main/recursion/Power.md)
+- [Power](https://github.com/ding-co/data-structure/blob/main/recursion/Power.md)
 
-- [`Fibonacci`](https://github.com/ding-co/data-structure/blob/main/recursion/Fibonacci.md)
+- [Fibonacci](https://github.com/ding-co/data-structure/blob/main/recursion/Fibonacci.md)
 
-- [`Hanoi`](https://github.com/ding-co/data-structure/blob/main/recursion/Hanoi.md)
+- [Hanoi](https://github.com/ding-co/data-structure/blob/main/recursion/Hanoi.md)
 
-[`Stack`](https://github.com/ding-co/data-structure/blob/main/stack/Stack.md)
+Stack
 
-[`List`](https://github.com/ding-co/data-structure/blob/main/list/List.md)
+- [Concept](https://github.com/ding-co/data-structure/blob/main/stack/Stack-concept.md)
 
-[`Queue`](https://github.com/ding-co/data-structure/blob/main/queue/Queue.md)
+- [Parentheses matching](https://github.com/ding-co/data-structure/blob/main/stack/Parentheses-matching.md)
+
+- [Expression evaluation](https://github.com/ding-co/data-structure/blob/main/stack/Expression-evaluation.md)
+
+List
+
+- [Concept](https://github.com/ding-co/data-structure/blob/main/list/Concept.md)
+
+- [Singly linked list](https://github.com/ding-co/data-structure/blob/main/list/Singly-linked-list.md)
+
+- [Doubly linked list](https://github.com/ding-co/data-structure/blob/main/list/Doubly-linked-list.md)
+
+- [Circular linked list](https://github.com/ding-co/data-structure/blob/main/list/Circular-linked-list.md)
+
+Queue
+
+- [Concept](https://github.com/ding-co/data-structure/blob/main/queue/Concept.md)
+
+- [Circular queue](https://github.com/ding-co/data-structure/blob/main/queue/Circular-queue.md)
+
+- [Priority queue](https://github.com/ding-co/data-structure/blob/main/queue/Priority-queue.md)
+
+Tree
+
+- [Concept](https://github.com/ding-co/data-structure/blob/main/tree/Concept.md)
+
+- [Binary tree](https://github.com/ding-co/data-structure/blob/main/tree/Binary-tree.md)
+
+- [Binary search tree](https://github.com/ding-co/data-structure/blob/main/tree/Binary-search-tree.md)
+
+Heap
+
+- [Max heap](https://github.com/ding-co/data-structure/blob/main/heap/Max-heap.md)
+
+- [Min heap](https://github.com/ding-co/data-structure/blob/main/heap/Min-head.md)
+
+Sort
+
+Graph
