@@ -63,6 +63,8 @@ Tree
 
 Heap
 
+- [Concept](https://github.com/ding-co/data-structure/blob/main/heap/Concept.md)
+
 - [Max heap](https://github.com/ding-co/data-structure/blob/main/heap/Max-heap.md)
 
 - [Min heap](https://github.com/ding-co/data-structure/blob/main/heap/Min-head.md)
