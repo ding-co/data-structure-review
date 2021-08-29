@@ -67,7 +67,7 @@ Heap
 
 - [Max heap](https://github.com/ding-co/data-structure/blob/main/heap/Max-heap.md)
 
-- [Min heap](https://github.com/ding-co/data-structure/blob/main/heap/Min-head.md)
+- [Min heap](https://github.com/ding-co/data-structure/blob/main/heap/Min-heap.md)
 
 Sort
 
