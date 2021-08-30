@@ -71,4 +71,8 @@ Heap
 
 Sort
 
+- [Sort basic](https://github.com/ding-co/data-structure/blob/main/sort/Sort-basic.md)
+
+- [Sort advanced](https://github.com/ding-co/data-structure/blob/main/sort/Sort-advanced.md)
+
 Graph
