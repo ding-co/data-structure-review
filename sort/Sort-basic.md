@@ -93,7 +93,86 @@
 - insertion sort (reversed direction) is good <br/>
   among above naive/easy 3 sort ways.
 
-#
+<br/>
+
+### _Implementation_
+
+- sort.py
+
+```python
+# bubble sort
+def bubble_sort(data):
+  n = len(data)
+  for i in range(n - 1, 0, -1):
+    for j in range(0, i):
+      if data[j] > data[j + 1]:
+        data[j], data[j + 1] = data[j + 1], data[j]
+  return data
+```
+
+```python
+# selection sort
+def selection_sort(data):
+  n = len(data)
+  for i in range(0, n):
+    smallest_idx = i
+    for j in range(i + 1, n):
+      if data[smallest_idx] > data[j]:
+        smallest_idx = j
+    data[smallest_idx], data[i] = data[i], data[smallest_idx]
+  return data
+```
+
+```python
+# insertion sort
+def insertion_sort(data):
+  n = len(data)
+  for i in range(0, n):
+    # imagine on hands
+    val = data[i]
+    j = i
+    while j > 0 and data[j - 1] > val:
+      data[j]= data[j - 1]
+      j -= 1
+    data[j] = val
+  return data
+```
+
+### _Unit Test_
+
+- test_sort.py
+
+```python
+# bubble sort unit test
+import unittest
+import random
+import copy
+from sort_basic import bubble_sort
+
+class TestSort(unittest.TestCase):
+  def test_bubblesort(self):
+    data = [5, 9, 6, 1, 2, 3, 7]
+    self.assertEqual([1, 2, 3, 5, 6, 7, 9], bubble_sort(data))
+    self.assertEqual([], bubble_sort([]))
+
+  def test_bubblesort_big(self):
+    data = list(range(100))
+    self.assertEqual(data, bubble_sort(data))
+    data = list(range(100, 0, -1))
+    answer = list(range(1, 101))
+    self.assertEqual(answer, bubble_sort(data))
+
+  def test_random(self):
+    for _ in range(10):
+      data1 = random.sample(range(1, 100), 30)
+      data2 = copy.deepcopy(data1)
+      data1.sort()
+      bubble_sort(data2)
+      self.assertEqual(data1, data2)
+
+if __name__ == '__main__':
+  unittest.main()
+```
 
 ### [Note]
 
@@ -110,3 +189,11 @@
 - Merge Sort/Quick Sort/Heap Sort
 - Radix Sort/Counting Sort
 - Recommendation: Insertion/Shell/Merge/Quick/Heap Sort
+- python sort - `array.sort()`
+- sort; always think the end part
+- unit test; automatically performed test code <br/>
+  - unittest module's TestCase inheritance
+  - automatically performed method
+  - assertion; if not true => error
+  - It's good to pre-create unit test what I want to code
+- VS Code Debugger;
