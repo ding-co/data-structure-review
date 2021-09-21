@@ -11,7 +11,7 @@ Data Structure Review using Python3 in VS Code
 
 <br/>
 
-Python Review
+[Python Review](https://github.com/ding-co/data-structure/blob/main/python-review/README.md)
 
 [Outline](https://github.com/ding-co/data-structure/blob/main/outline/Outline.md)
 
