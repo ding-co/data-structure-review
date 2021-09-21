@@ -78,3 +78,15 @@ Sort
 Graph
 
 - [Concept](https://github.com/ding-co/data-structure/blob/main/graph/Concept.md)
+
+- [Algorithms](https://github.com/ding-co/data-structure/blob/main/graph/Algorithms.md)
+
+Search
+
+- [Naive Search](https://github.com/ding-co/data-structure/blob/main/search/naive-search.md)
+
+- [Balanced Search Tree](https://github.com/ding-co/data-structure/blob/main/search/balanced-search-tree.md)
+
+- [Skip List](https://github.com/ding-co/data-structure/blob/main/search/skip-list.md)
+
+- [Hashing](https://github.com/ding-co/data-structure/blob/main/search/hashing.md)
