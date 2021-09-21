@@ -39,11 +39,21 @@
       - Connected / Disconnected / Complete Graph
         - completed graph; all vertex's edge fully-connected
 - Representations (use computer)
-- Algorithms
-  - Traverse: DFS, BFS
-  - Minimum Spanning Tree: Kruskal, Prim
-  - Shortest Path: Dijkstra, Floyd
-  - Topological Sort: Kahn, DFS
+  - Adjacency list
+    - vertex - vertex connection
+    - use linked list (represent)
+      - we don't know how many vertex will be connected
+    - [ [ ], [ ], [ ], [ ] ]
+      - v[0].append(i)
+  - Adjacency matrix
+    - vertex - vertex connection
+    - undirected; symmetrical
+    - directed; asymmetrical
+    - 1 (connected) / 0 (disconnected) or weight
+  - Incidence matrix
+    - vertex - edge connection
+    - edge; start vertex, end vertex
+    - vertex; in-degree (1 numbers), out-degree (-1 numbers)
 
 #
 
@@ -71,3 +81,7 @@
     - sorting and represent to clients
     - google (pageRank, graph analysis -> ranking)
   - ex 3) Bio Informatics (Bio + Computer Science)
+    - graph analysis
+    - gene - gene combination
+    - gene - disease relationship (network)
+    - protein - protein network
