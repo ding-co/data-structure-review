@@ -76,3 +76,5 @@ Sort
 - [Sort advanced](https://github.com/ding-co/data-structure/blob/main/sort/Sort-advanced.md)
 
 Graph
+
+- [Concept](https://github.com/ding-co/data-structure/blob/main/graph/Concept.md)
