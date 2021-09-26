@@ -3,7 +3,7 @@
 Data Structure Review using Python3 in VS Code
 
 > Python3 <br/>
-> VS Code
+> VS Codeg
 
 #
 
@@ -79,7 +79,13 @@ Graph
 
 - [Concept](https://github.com/ding-co/data-structure/blob/main/graph/Concept.md)
 
-- [Algorithms](https://github.com/ding-co/data-structure/blob/main/graph/Algorithms.md)
+- [Traverse](https://github.com/ding-co/data-structure/blob/main/graph/Traverse.md)
+
+- [Minimum Spanning Tree](https://github.com/ding-co/data-structure/blob/main/graph/Minimum-spanning-tree.md)
+
+- [Shortest Path](https://github.com/ding-co/data-structure/blob/main/graph/Shortest-path.md)
+
+- [Topological Sort](https://github.com/ding-co/data-structure/blob/main/graph/Topological-sort.md)
 
 Search
 
