@@ -32,6 +32,7 @@
 
   - Rudolf Bayer (1972)
   - / Used in Linux Kernel, C++ STL, Java
+  - Binary Search Tree based
   - Properties
     - Root is Black
     - All leaves (NULL) are Black (new node is Red)
@@ -59,6 +60,16 @@
   - T.C: insert/update/delete O(log n)
 
 - B-Tree
+  - Rudolf Bayer, Edward M. McCreight (1971)
+  - Property
+    - Every node has at most m children
+      - ex) 3 children => maximum degree 3 => max key 2
+    - Every non-leaf node (except root) has at least [m/2] children
+    - The root has at least two children if it is not a leaf node
+    - A non-leaf node with k children contains k-1 keys
+    - All leaves appear in the same level
+  - 2-3 Tree: B-Tree of order 3
+  - Variants(improvement): B+ Tree, B\* Tree
 
 #
 
@@ -75,3 +86,14 @@
 - Red-Black Tree
   - prevent red - red
   - one subtree height => h, other subtree height maximum 2\*h
+- B-Tree
+  - not rotate
+  - split => 100% balanced
+  - all nodes' heights are same
+  - pre-selected node's maximum values
+  - utilization
+    - Database (file structure)
+    - index => B+ Tree
+    - B+ Tree
+      - non-leaf node => duplicated key
+      - leaf node => sorted
