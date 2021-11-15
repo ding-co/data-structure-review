@@ -9,7 +9,7 @@
 ## `Tower of Hanoi`
 
 - void hanoi(int n, char from, char to, char tmp)
-- A large disc should be above a small disc
+- A small disc should be above a large disc
 - src - tmp - des <br/>
   (source, temporary, destination)
 

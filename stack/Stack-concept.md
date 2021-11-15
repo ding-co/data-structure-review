@@ -1,4 +1,4 @@
- re# Stack
+# Stack
 
 ## _Outline_
 

@@ -25,7 +25,7 @@
 
 - Card game
 
-  - when I play the card game, I sort the cart on my hands
+  - when I play the card game, I sort the card on my hands
   - ascending order
 
     1. find the smallest card and locate to first position (selection sort)
@@ -132,7 +132,7 @@ def insertion_sort(data):
     val = data[i]
     j = i
     while j > 0 and data[j - 1] > val:
-      data[j]= data[j - 1]
+      data[j] = data[j - 1]
       j -= 1
     data[j] = val
   return data
