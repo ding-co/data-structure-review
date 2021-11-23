@@ -10,9 +10,11 @@
 class MaxHeap:
   def __init__(self):
     self.array = []
+
   def push(self, value):
     self.array.append(value)
     self.__up_heap(len(self.array) - 1)
+
   def pop(self):
     result = self.array[0]
     value = self.array.pop()
@@ -20,8 +22,10 @@ class MaxHeap:
       self.array[0] = value
       self.__down_heap(0)
     return result
+
   def is_empty(self):
     return len(self.array) == 0
+
   # private function (__)
   def __parent_idx(self, idx):
     # 0 --> 1, 2
@@ -29,16 +33,20 @@ class MaxHeap:
     # 2 --> 5, 6
     # 3 --> 7, 8
     return int((idx + 1) / 2) - 1
+
   def __left_idx(self, idx):
     return 2 * idx + 1
+
   def __right_idx(self, idx):
     return 2 * idx + 2
+
   def __up_heap(self, current):
     parent = self.__parent_idx(current)
     while current > 0 and self.array[current] > self.array[parent]:
       self.array[current], self.array[parent] = self.array[parent], self.array[current]
       current = parent
       parent = self.__parent_idx(current)
+
   def __down_heap(self, current):
     left, right = self.__left_idx(current), self.__right_idx(current)
     # child exists

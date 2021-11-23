@@ -216,7 +216,7 @@
 # ex) 3, 2, 0, 6, 2, 9, 7, 1, 5, 0
 # make a queue (0, 1, 2, 3, 4, 5, 6, 7, 8, 9)
 # when we meet queue's number, just put item
-# 0, 0, 1, 2, 2, 3, 5, 6, 7, 9 (pop each queue's index)
+# 0, 1, 2, 2, 3, 5, 6, 7, 9 (pop each queue's index)
 
 # if 3 digit number
 # ex) 352, 47, 102, 29, 4, 507, 19

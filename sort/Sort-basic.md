@@ -57,7 +57,7 @@
        - Assume you've got one
        - every compare, and swap
        - Compare numbers from the beginning
-       - whe have to shift rest numbers
+       - we have to shift rest numbers
        - compare 1, shift n <br/>
          compare n, shift 0 <br/>
          each 1 card => operation: n
