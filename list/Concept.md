@@ -8,8 +8,8 @@
 
 - common: a collection of things (Data collection structure)
 - difference <br/>
-  List: Order O, Overlap O <br/>
-  Set: Order X, Overlap X
+  List: Order O, Duplicate O <br/>
+  Set: Order X, Duplicate X
 
 ### _List work_
 
